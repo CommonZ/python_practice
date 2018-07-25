@@ -1,5 +1,5 @@
-# python_practice
-my python practice code.
+# Python_practice
+My python practice code.
 
 # Software develop flow
 1. What
@@ -16,3 +16,6 @@ my python practice code.
 2. backup_ver3.py : 
     smaller program can backup the specific directory.
     user can add comment for backup.
+3. palindrome
+    judge palindrome string
+    ignore case sensitivity and whitespace
