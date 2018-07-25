@@ -8,7 +8,7 @@ sys = os.name
 print("system type:", sys)
 # use different format directory in different OS
 if sys == WIN:
-    source = ['"C:\\ptest"']
+    source = ['C:\\ptest', 'C:\\ptest2']
 else:
     source = ['/Users/fzhu/notes']
 
@@ -22,12 +22,14 @@ else:
 
 # 3. package file to zip
 # 4. filename by date and time
-target = target_dir + os.sep + \
-         time.strftime('%Y%m%d_%H%M%S') + '.zip'
+today = target_dir + os.sep + time.strftime('%Y%m%d')
+now = time.strftime('%H%M%S')
 
-# check target dir or create it
-if not os.path.exists(target_dir):
-    os.mkdir(target_dir)
+target = today + os.sep + now + '.zip'
+
+# check target subdir or create it
+if not os.path.exists(today):
+    os.mkdir(today)
 
 # 5. use zip package it
 if sys == WIN:
